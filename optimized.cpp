@@ -5,7 +5,7 @@ int productOfDigits(int n) {
     int product = 1;
     while (n != 0) {
         int digit = n % 10;
-        product = product * digit;
+        product *= digit;
         n /= 10;
     }
     return product;
@@ -21,7 +21,6 @@ void displayProductOfDigits(int num1, int num2) {
 }
 
 int main() {
-    int variable = 123;
     for (int i = 20; i < 100; ++i) {
         for (int j = 500; j < 1000; ++j) {
             displayProductOfDigits(i, j);

@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" width="1200" height="310" onload="init(evt)" viewBox="0 0 1200 310" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg version="1.1" width="1200" height="518" onload="init(evt)" viewBox="0 0 1200 518" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <!-- Flame graph stack visualization. See https://github.com/brendangregg/FlameGraph for latest version, and http://www.brendangregg.com/flamegraphs.html for examples. -->
 <!-- NOTES:  -->
 <defs>
@@ -421,73 +421,209 @@
 	}
 ]]>
 </script>
-<rect x="0.0" y="0" width="1200.0" height="310.0" fill="url(#background)"  />
+<rect x="0.0" y="0" width="1200.0" height="518.0" fill="url(#background)"  />
 <text id="title" x="600.00" y="24" >Flame Graph</text>
-<text id="details" x="10.00" y="293" > </text>
+<text id="details" x="10.00" y="501" > </text>
 <text id="unzoom" x="10.00" y="24" class="hide">Reset Zoom</text>
 <text id="search" x="1090.00" y="24" >Search</text>
 <text id="ignorecase" x="1174.00" y="24" >ic</text>
-<text id="matched" x="1090.00" y="293" > </text>
+<text id="matched" x="1090.00" y="501" > </text>
 <g id="frames">
 <g >
-<title>__libc_start_main_impl (240,000,000 samples, 100.00%)</title><rect x="10.0" y="213" width="1180.0" height="15.0" fill="rgb(218,63,15)" rx="2" ry="2" />
-<text  x="13.00" y="223.5" >__libc_start_main_impl</text>
+<title>pty_write (40,000,000 samples, 16.67%)</title><rect x="206.7" y="85" width="196.6" height="15.0" fill="rgb(210,23,5)" rx="2" ry="2" />
+<text  x="209.67" y="95.5" >pty_write</text>
 </g>
 <g >
-<title>std::endl&lt;char, std::char_traits&lt;char&gt; &gt; (240,000,000 samples, 100.00%)</title><rect x="10.0" y="149" width="1180.0" height="15.0" fill="rgb(238,152,36)" rx="2" ry="2" />
-<text  x="13.00" y="159.5" >std::endl&lt;char, std::char_traits&lt;char&gt; &gt;</text>
+<title>optimized (240,000,000 samples, 100.00%)</title><rect x="10.0" y="453" width="1180.0" height="15.0" fill="rgb(226,98,23)" rx="2" ry="2" />
+<text  x="13.00" y="463.5" >optimized</text>
 </g>
 <g >
-<title>main (240,000,000 samples, 100.00%)</title><rect x="10.0" y="181" width="1180.0" height="15.0" fill="rgb(243,179,42)" rx="2" ry="2" />
-<text  x="13.00" y="191.5" >main</text>
+<title>pty_write (100,000,000 samples, 41.67%)</title><rect x="403.3" y="85" width="491.7" height="15.0" fill="rgb(210,23,5)" rx="2" ry="2" />
+<text  x="406.33" y="95.5" >pty_write</text>
 </g>
 <g >
-<title>_IO_new_file_overflow (240,000,000 samples, 100.00%)</title><rect x="10.0" y="117" width="1180.0" height="15.0" fill="rgb(247,194,46)" rx="2" ry="2" />
-<text  x="13.00" y="127.5" >_IO_new_file_overflow</text>
+<title>__x64_sys_write (220,000,000 samples, 91.67%)</title><rect x="108.3" y="213" width="1081.7" height="15.0" fill="rgb(246,189,45)" rx="2" ry="2" />
+<text  x="111.33" y="223.5" >__x64_sys_write</text>
 </g>
 <g >
-<title>_IO_new_file_write (240,000,000 samples, 100.00%)</title><rect x="10.0" y="69" width="1180.0" height="15.0" fill="rgb(222,80,19)" rx="2" ry="2" />
-<text  x="13.00" y="79.5" >_IO_new_file_write</text>
+<title>sysvec_call_function_single (20,000,000 samples, 8.33%)</title><rect x="10.0" y="229" width="98.3" height="15.0" fill="rgb(221,78,18)" rx="2" ry="2" />
+<text  x="13.00" y="239.5" >sysvec_call..</text>
 </g>
 <g >
-<title>_start (240,000,000 samples, 100.00%)</title><rect x="10.0" y="229" width="1180.0" height="15.0" fill="rgb(245,185,44)" rx="2" ry="2" />
-<text  x="13.00" y="239.5" >_start</text>
+<title>displayProductOfDigits (240,000,000 samples, 100.00%)</title><rect x="10.0" y="373" width="1180.0" height="15.0" fill="rgb(233,130,31)" rx="2" ry="2" />
+<text  x="13.00" y="383.5" >displayProductOfDigits</text>
 </g>
 <g >
-<title>std::ostream::put (240,000,000 samples, 100.00%)</title><rect x="10.0" y="133" width="1180.0" height="15.0" fill="rgb(219,64,15)" rx="2" ry="2" />
-<text  x="13.00" y="143.5" >std::ostream::put</text>
+<title>queue_work_on (40,000,000 samples, 16.67%)</title><rect x="206.7" y="53" width="196.6" height="15.0" fill="rgb(248,200,48)" rx="2" ry="2" />
+<text  x="209.67" y="63.5" >queue_work_on</text>
 </g>
 <g >
-<title>_IO_new_do_write (240,000,000 samples, 100.00%)</title><rect x="10.0" y="101" width="1180.0" height="15.0" fill="rgb(246,192,46)" rx="2" ry="2" />
-<text  x="13.00" y="111.5" >_IO_new_do_write</text>
+<title>process_output_block (100,000,000 samples, 41.67%)</title><rect x="403.3" y="101" width="491.7" height="15.0" fill="rgb(252,216,51)" rx="2" ry="2" />
+<text  x="406.33" y="111.5" >process_output_block</text>
 </g>
 <g >
-<title>all (240,000,000 samples, 100%)</title><rect x="10.0" y="261" width="1180.0" height="15.0" fill="rgb(213,39,9)" rx="2" ry="2" />
-<text  x="13.00" y="271.5" ></text>
+<title>_raw_spin_unlock_irqrestore (20,000,000 samples, 8.33%)</title><rect x="895.0" y="85" width="98.3" height="15.0" fill="rgb(228,106,25)" rx="2" ry="2" />
+<text  x="898.00" y="95.5" >_raw_spin_u..</text>
 </g>
 <g >
-<title>new_do_write (240,000,000 samples, 100.00%)</title><rect x="10.0" y="85" width="1180.0" height="15.0" fill="rgb(206,5,1)" rx="2" ry="2" />
-<text  x="13.00" y="95.5" >new_do_write</text>
+<title>queue_work_on (100,000,000 samples, 41.67%)</title><rect x="403.3" y="53" width="491.7" height="15.0" fill="rgb(248,200,48)" rx="2" ry="2" />
+<text  x="406.33" y="63.5" >queue_work_on</text>
 </g>
 <g >
-<title>displayProductOfDigits (240,000,000 samples, 100.00%)</title><rect x="10.0" y="165" width="1180.0" height="15.0" fill="rgb(233,130,31)" rx="2" ry="2" />
-<text  x="13.00" y="175.5" >displayProductOfDigits</text>
+<title>file_tty_write.constprop.0 (200,000,000 samples, 83.33%)</title><rect x="206.7" y="149" width="983.3" height="15.0" fill="rgb(219,64,15)" rx="2" ry="2" />
+<text  x="209.67" y="159.5" >file_tty_write.constprop.0</text>
 </g>
 <g >
-<title>file (240,000,000 samples, 100.00%)</title><rect x="10.0" y="245" width="1180.0" height="15.0" fill="rgb(226,97,23)" rx="2" ry="2" />
-<text  x="13.00" y="255.5" >file</text>
+<title>vfs_write (200,000,000 samples, 83.33%)</title><rect x="206.7" y="181" width="983.3" height="15.0" fill="rgb(250,209,50)" rx="2" ry="2" />
+<text  x="209.67" y="191.5" >vfs_write</text>
 </g>
 <g >
-<title>__GI___libc_write (240,000,000 samples, 100.00%)</title><rect x="10.0" y="53" width="1180.0" height="15.0" fill="rgb(217,57,13)" rx="2" ry="2" />
-<text  x="13.00" y="63.5" >__GI___libc_write</text>
+<title>do_tty_write (200,000,000 samples, 83.33%)</title><rect x="206.7" y="133" width="983.3" height="15.0" fill="rgb(207,11,2)" rx="2" ry="2" />
+<text  x="209.67" y="143.5" >do_tty_write</text>
 </g>
 <g >
-<title>[[kernel.kallsyms]] (240,000,000 samples, 100.00%)</title><rect x="10.0" y="37" width="1180.0" height="15.0" fill="rgb(213,39,9)" rx="2" ry="2" />
-<text  x="13.00" y="47.5" >[[kernel.kallsyms]]</text>
+<title>new_do_write (240,000,000 samples, 100.00%)</title><rect x="10.0" y="293" width="1180.0" height="15.0" fill="rgb(206,5,1)" rx="2" ry="2" />
+<text  x="13.00" y="303.5" >new_do_write</text>
 </g>
 <g >
-<title>__libc_start_call_main (240,000,000 samples, 100.00%)</title><rect x="10.0" y="197" width="1180.0" height="15.0" fill="rgb(210,26,6)" rx="2" ry="2" />
-<text  x="13.00" y="207.5" >__libc_start_call_main</text>
+<title>do_syscall_64 (220,000,000 samples, 91.67%)</title><rect x="108.3" y="229" width="1081.7" height="15.0" fill="rgb(209,20,4)" rx="2" ry="2" />
+<text  x="111.33" y="239.5" >do_syscall_64</text>
+</g>
+<g >
+<title>finish_task_switch.isra.0 (40,000,000 samples, 16.67%)</title><rect x="993.3" y="37" width="196.7" height="15.0" fill="rgb(246,189,45)" rx="2" ry="2" />
+<text  x="996.33" y="47.5" >finish_task_switch.isra.0</text>
+</g>
+<g >
+<title>_start (240,000,000 samples, 100.00%)</title><rect x="10.0" y="437" width="1180.0" height="15.0" fill="rgb(245,185,44)" rx="2" ry="2" />
+<text  x="13.00" y="447.5" >_start</text>
+</g>
+<g >
+<title>__GI___libc_write (240,000,000 samples, 100.00%)</title><rect x="10.0" y="261" width="1180.0" height="15.0" fill="rgb(217,57,13)" rx="2" ry="2" />
+<text  x="13.00" y="271.5" >__GI___libc_write</text>
+</g>
+<g >
+<title>irqentry_exit (20,000,000 samples, 8.33%)</title><rect x="10.0" y="213" width="98.3" height="15.0" fill="rgb(219,66,15)" rx="2" ry="2" />
+<text  x="13.00" y="223.5" >irqentry_exit</text>
+</g>
+<g >
+<title>schedule (40,000,000 samples, 16.67%)</title><rect x="993.3" y="69" width="196.7" height="15.0" fill="rgb(254,229,54)" rx="2" ry="2" />
+<text  x="996.33" y="79.5" >schedule</text>
+</g>
+<g >
+<title>wait_woken (40,000,000 samples, 16.67%)</title><rect x="993.3" y="101" width="196.7" height="15.0" fill="rgb(236,146,35)" rx="2" ry="2" />
+<text  x="996.33" y="111.5" >wait_woken</text>
+</g>
+<g >
+<title>__schedule (40,000,000 samples, 16.67%)</title><rect x="993.3" y="53" width="196.7" height="15.0" fill="rgb(227,103,24)" rx="2" ry="2" />
+<text  x="996.33" y="63.5" >__schedule</text>
+</g>
+<g >
+<title>all (240,000,000 samples, 100%)</title><rect x="10.0" y="469" width="1180.0" height="15.0" fill="rgb(213,39,9)" rx="2" ry="2" />
+<text  x="13.00" y="479.5" ></text>
+</g>
+<g >
+<title>main (240,000,000 samples, 100.00%)</title><rect x="10.0" y="389" width="1180.0" height="15.0" fill="rgb(243,179,42)" rx="2" ry="2" />
+<text  x="13.00" y="399.5" >main</text>
+</g>
+<g >
+<title>n_tty_write (200,000,000 samples, 83.33%)</title><rect x="206.7" y="117" width="983.3" height="15.0" fill="rgb(210,23,5)" rx="2" ry="2" />
+<text  x="209.67" y="127.5" >n_tty_write</text>
+</g>
+<g >
+<title>__libc_start_main_impl (240,000,000 samples, 100.00%)</title><rect x="10.0" y="421" width="1180.0" height="15.0" fill="rgb(218,63,15)" rx="2" ry="2" />
+<text  x="13.00" y="431.5" >__libc_start_main_impl</text>
+</g>
+<g >
+<title>_IO_new_file_write (240,000,000 samples, 100.00%)</title><rect x="10.0" y="277" width="1180.0" height="15.0" fill="rgb(222,80,19)" rx="2" ry="2" />
+<text  x="13.00" y="287.5" >_IO_new_file_write</text>
+</g>
+<g >
+<title>std::ostream::put (240,000,000 samples, 100.00%)</title><rect x="10.0" y="341" width="1180.0" height="15.0" fill="rgb(219,64,15)" rx="2" ry="2" />
+<text  x="13.00" y="351.5" >std::ostream::put</text>
+</g>
+<g >
+<title>_IO_new_do_write (240,000,000 samples, 100.00%)</title><rect x="10.0" y="309" width="1180.0" height="15.0" fill="rgb(246,192,46)" rx="2" ry="2" />
+<text  x="13.00" y="319.5" >_IO_new_do_write</text>
+</g>
+<g >
+<title>tty_insert_flip_string_and_push_buffer (100,000,000 samples, 41.67%)</title><rect x="403.3" y="69" width="491.7" height="15.0" fill="rgb(217,55,13)" rx="2" ry="2" />
+<text  x="406.33" y="79.5" >tty_insert_flip_string_and_push_buffer</text>
+</g>
+<g >
+<title>std::endl&lt;char, std::char_traits&lt;char&gt; &gt; (240,000,000 samples, 100.00%)</title><rect x="10.0" y="357" width="1180.0" height="15.0" fill="rgb(238,152,36)" rx="2" ry="2" />
+<text  x="13.00" y="367.5" >std::endl&lt;char, std::char_traits&lt;char&gt; &gt;</text>
+</g>
+<g >
+<title>tty_write (200,000,000 samples, 83.33%)</title><rect x="206.7" y="165" width="983.3" height="15.0" fill="rgb(234,134,32)" rx="2" ry="2" />
+<text  x="209.67" y="175.5" >tty_write</text>
+</g>
+<g >
+<title>finish_task_switch.isra.0 (20,000,000 samples, 8.33%)</title><rect x="10.0" y="117" width="98.3" height="15.0" fill="rgb(246,189,45)" rx="2" ry="2" />
+<text  x="13.00" y="127.5" >finish_task..</text>
+</g>
+<g >
+<title>entry_SYSCALL_64_after_hwframe (220,000,000 samples, 91.67%)</title><rect x="108.3" y="245" width="1081.7" height="15.0" fill="rgb(218,63,15)" rx="2" ry="2" />
+<text  x="111.33" y="255.5" >entry_SYSCALL_64_after_hwframe</text>
+</g>
+<g >
+<title>_IO_new_file_overflow (240,000,000 samples, 100.00%)</title><rect x="10.0" y="325" width="1180.0" height="15.0" fill="rgb(247,194,46)" rx="2" ry="2" />
+<text  x="13.00" y="335.5" >_IO_new_file_overflow</text>
+</g>
+<g >
+<title>exit_to_user_mode_loop (20,000,000 samples, 8.33%)</title><rect x="10.0" y="165" width="98.3" height="15.0" fill="rgb(224,90,21)" rx="2" ry="2" />
+<text  x="13.00" y="175.5" >exit_to_use..</text>
+</g>
+<g >
+<title>asm_sysvec_call_function_single (20,000,000 samples, 8.33%)</title><rect x="10.0" y="245" width="98.3" height="15.0" fill="rgb(234,136,32)" rx="2" ry="2" />
+<text  x="13.00" y="255.5" >asm_sysvec_..</text>
+</g>
+<g >
+<title>schedule (20,000,000 samples, 8.33%)</title><rect x="10.0" y="149" width="98.3" height="15.0" fill="rgb(254,229,54)" rx="2" ry="2" />
+<text  x="13.00" y="159.5" >schedule</text>
+</g>
+<g >
+<title>__schedule (20,000,000 samples, 8.33%)</title><rect x="10.0" y="133" width="98.3" height="15.0" fill="rgb(227,103,24)" rx="2" ry="2" />
+<text  x="13.00" y="143.5" >__schedule</text>
+</g>
+<g >
+<title>do_output_char (40,000,000 samples, 16.67%)</title><rect x="206.7" y="101" width="196.6" height="15.0" fill="rgb(247,197,47)" rx="2" ry="2" />
+<text  x="209.67" y="111.5" >do_output_char</text>
+</g>
+<g >
+<title>ksys_write (220,000,000 samples, 91.67%)</title><rect x="108.3" y="197" width="1081.7" height="15.0" fill="rgb(205,4,1)" rx="2" ry="2" />
+<text  x="111.33" y="207.5" >ksys_write</text>
+</g>
+<g >
+<title>__libc_start_call_main (240,000,000 samples, 100.00%)</title><rect x="10.0" y="405" width="1180.0" height="15.0" fill="rgb(210,26,6)" rx="2" ry="2" />
+<text  x="13.00" y="415.5" >__libc_start_call_main</text>
+</g>
+<g >
+<title>tty_insert_flip_string_and_push_buffer (40,000,000 samples, 16.67%)</title><rect x="206.7" y="69" width="196.6" height="15.0" fill="rgb(217,55,13)" rx="2" ry="2" />
+<text  x="209.67" y="79.5" >tty_insert_flip_string_an..</text>
+</g>
+<g >
+<title>remove_wait_queue (20,000,000 samples, 8.33%)</title><rect x="895.0" y="101" width="98.3" height="15.0" fill="rgb(241,169,40)" rx="2" ry="2" />
+<text  x="898.00" y="111.5" >remove_wait..</text>
+</g>
+<g >
+<title>exit_to_user_mode_prepare (20,000,000 samples, 8.33%)</title><rect x="10.0" y="181" width="98.3" height="15.0" fill="rgb(228,108,25)" rx="2" ry="2" />
+<text  x="13.00" y="191.5" >exit_to_use..</text>
+</g>
+<g >
+<title>__fget_light (20,000,000 samples, 8.33%)</title><rect x="108.3" y="165" width="98.4" height="15.0" fill="rgb(233,132,31)" rx="2" ry="2" />
+<text  x="111.33" y="175.5" >__fget_light</text>
+</g>
+<g >
+<title>__fdget_pos (20,000,000 samples, 8.33%)</title><rect x="108.3" y="181" width="98.4" height="15.0" fill="rgb(216,55,13)" rx="2" ry="2" />
+<text  x="111.33" y="191.5" >__fdget_pos</text>
+</g>
+<g >
+<title>schedule_timeout (40,000,000 samples, 16.67%)</title><rect x="993.3" y="85" width="196.7" height="15.0" fill="rgb(234,137,32)" rx="2" ry="2" />
+<text  x="996.33" y="95.5" >schedule_timeout</text>
+</g>
+<g >
+<title>irqentry_exit_to_user_mode (20,000,000 samples, 8.33%)</title><rect x="10.0" y="197" width="98.3" height="15.0" fill="rgb(254,229,54)" rx="2" ry="2" />
+<text  x="13.00" y="207.5" >irqentry_ex..</text>
 </g>
 </g>
 </svg>

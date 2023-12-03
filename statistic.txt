@@ -1,0 +1,116 @@
+/usr/bin/time --verbose ./file
+Command being timed: "./file"
+        User time (seconds): 0.09
+        System time (seconds): 0.33
+        Percent of CPU this job got: 8%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.00
+        Average shared text size (kbytes): 0
+        Average unshared data size (kbytes): 0
+        Average stack size (kbytes): 0
+        Average total size (kbytes): 0
+        Maximum resident set size (kbytes): 3328
+        Average resident set size (kbytes): 0
+        Major (requiring I/O) page faults: 0
+        Minor (reclaiming a frame) page faults: 136
+        Voluntary context switches: 523
+        Involuntary context switches: 3638
+        Swaps: 0
+        File system inputs: 0
+        File system outputs: 0
+        Socket messages sent: 0
+        Socket messages received: 0
+        Signals delivered: 0
+        Page size (bytes): 4096
+        Exit status: 0
+
+
+
+/usr/bin/time --verbose ./optimized
+Command being timed: "./optimized"
+        User time (seconds): 0.05
+        System time (seconds): 0.33
+        Percent of CPU this job got: 8%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.76
+        Average shared text size (kbytes): 0
+        Average unshared data size (kbytes): 0
+        Average stack size (kbytes): 0
+        Average total size (kbytes): 0
+        Maximum resident set size (kbytes): 3328
+        Average resident set size (kbytes): 0
+        Major (requiring I/O) page faults: 0
+        Minor (reclaiming a frame) page faults: 138
+        Voluntary context switches: 527
+        Involuntary context switches: 3156
+        Swaps: 0
+        File system inputs: 0
+        File system outputs: 0
+        Socket messages sent: 0
+        Socket messages received: 0
+        Signals delivered: 0
+        Page size (bytes): 4096
+        Exit status: 0
+
+
+perf stat -d ./file
+ Performance counter stats for './file':
+
+            257,70 msec task-clock                       #    0,051 CPUs utilized
+             7 871      context-switches                 #   30,544 K/sec
+                 5      cpu-migrations                   #   19,403 /sec
+               125      page-faults                      #  485,064 /sec
+   <not supported>      cycles
+   <not supported>      instructions
+   <not supported>      branches
+   <not supported>      branch-misses
+   <not supported>      L1-dcache-loads
+   <not supported>      L1-dcache-load-misses
+   <not supported>      LLC-loads
+   <not supported>      LLC-load-misses
+
+       5,071540142 seconds time elapsed
+
+       0,067731000 seconds user
+       0,191241000 seconds sys
+
+
+perf stat -d ./optimized
+ Performance counter stats for './optimized':
+
+            257,17 msec task-clock                       #    0,056 CPUs utilized
+            17 633      context-switches                 #   68,565 K/sec
+                 4      cpu-migrations                   #   15,554 /sec
+               124      page-faults                      #  482,169 /sec
+   <not supported>      cycles
+   <not supported>      instructions
+   <not supported>      branches
+   <not supported>      branch-misses
+   <not supported>      L1-dcache-loads
+   <not supported>      L1-dcache-load-misses
+   <not supported>      LLC-loads
+   <not supported>      LLC-load-misses
+
+       4,585688201 seconds time elapsed
+
+       0,040497000 seconds user
+       0,218683000 seconds sys
+
+perf record ./file
+[ perf record: Woken up 1 times to write data ]
+[ perf record: Captured and wrote 0,080 MB perf.data (1824 samples) ]
+
+perf record ./optimized
+[ perf record: Woken up 1 times to write data ]
+[ perf record: Captured and wrote 0,054 MB perf.data (1134 samples) ]
+
+perf report
+  34,07%  optimized  [kernel.kallsyms]     [k] queue_work_on
+  33,13%  optimized  [kernel.kallsyms]     [k] finish_task_switch.isra.0
+   5,04%  optimized  libc.so.6             [.] __GI___libc_write
+   4,10%  optimized  [kernel.kallsyms]     [k] _raw_spin_unlock_irqrestore
+   2,89%  optimized  [kernel.kallsyms]     [k] __do_softirq
+   2,02%  optimized  [kernel.kallsyms]     [k] syscall_enter_from_user_mode
+   1,81%  optimized  [kernel.kallsyms]     [k] process_output_block
+   1,41%  optimized  libc.so.6             [.] _IO_fwrite
+   0,87%  optimized  libc.so.6             [.] __memcpy_ssse3
+   0,74%  optimized  [kernel.kallsyms]     [k] apparmor_file_permission
+
